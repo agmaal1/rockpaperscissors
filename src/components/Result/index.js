@@ -2,8 +2,8 @@ import React from "react";
 import {weapons} from '../../infrastructure/constants'
 
 const TIE = "Tie!";
-const LOSE = "You Lose";
-const WIN = "You win";
+const LOSE = "You Lose!";
+const WIN = "You Win!";
 
 function Result({ player1, player2 }) {
   const displayResult = () => {
@@ -30,7 +30,7 @@ function Result({ player1, player2 }) {
       }
   }
 
- return <h3>{displayResult()}</h3>
+ return <h3 className='result'>{displayResult()}</h3>
 }
 
 export default Result

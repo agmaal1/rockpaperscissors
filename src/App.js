@@ -23,7 +23,6 @@ function App() {
   return (
     <section className="main">
       <div className="content">
-        <div className="box">
           <div className="header-row">
             <header>
               <h2>Rock Paper Scissors</h2>
@@ -58,7 +57,6 @@ function App() {
             </Button>
           </div>
         </div>
-      </div>
     </section>
   );
 }

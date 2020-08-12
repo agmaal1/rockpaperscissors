@@ -27,14 +27,13 @@ html {
 
 .content {
   max-width: 95%;
-  min-width: 70%;
+  min-width: 60%;
 }
 
 .players-row {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  column-gap: 0;
-  justify-items:center;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
 }
 
 .player {
@@ -90,6 +89,10 @@ html {
   padding-top: calc(0.5em - 1px);
   text-align: center;
   white-space: nowrap;
+}
+
+.result {
+  font-size: 2rem;
 }
 
 /* .player {
