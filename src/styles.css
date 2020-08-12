@@ -31,9 +31,10 @@ html {
 }
 
 .players-row {
-  display: flex;
-  justify-content: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 0;
+  justify-items:center;
 }
 
 .player {
