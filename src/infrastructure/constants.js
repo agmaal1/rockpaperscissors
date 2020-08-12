@@ -1,0 +1,1 @@
+export const weapons = ['rock', 'paper', 'scissors']

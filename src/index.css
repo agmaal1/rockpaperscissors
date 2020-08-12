@@ -66,6 +66,7 @@ html {
 .box {
   background-color: #fff;
   border-radius: 6px;
+  
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
     0 0 0 1px rgba(10, 10, 10, 0.02);
   color: #4a4a4a;
@@ -77,6 +78,8 @@ html {
   background-color: #fff;
   border-color: #dbdbdb;
   border-width: 0.1px;
+  border-radius: 4px;
+  box-shadow: none;
   color: #363636;
   cursor: pointer;
   justify-content: center;
