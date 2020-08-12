@@ -1,4 +1,8 @@
 import React from "react";
+import Player from "./components/Player";
+import Button from "./lib/Button";
+
+// 'scissors' 'rock' 'paper'
 
 function App() {
   return (
@@ -11,16 +15,16 @@ function App() {
             </header>
           </div>
           <div className="players-row">
-            <div className="player">player 1</div>
+            <Player weapon={'scissors'}></Player>
             <div className="result">
               <h3>VS</h3>
             </div>
-            <div className="player">player 2</div>
+            <Player weapon={'rock'}></Player>
           </div>
           <div className="btn-row">
-            <button className='btn' >Rock</button>
-            <button className='btn' >Paper</button>
-            <button className='btn' >Scissors</button>
+            <Button>Rock</Button>
+            <Button>Paper</Button>
+            <Button>Scissors</Button>
           </div>
         </div>
       </div>
