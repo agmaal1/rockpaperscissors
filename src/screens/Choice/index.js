@@ -29,25 +29,28 @@ function Choice({history}) {
 
   if (count === 0) {
     return (
-      <>
+      <div>
         <div className="row">
-          <h2 className="title">Time out!</h2>
+          <h2 className="count">Time out!</h2>
         </div>
         <div className="row">
         <Button type="button" onClick={handleClickStart} name="paper" alt="paper">
           TRY AGAIN!
         </Button>
         </div>
-      </>
+      </div>
     );
   }
 
   return (
-    <>
+    <div>
       <div className="row">
-        <h2 className="title">{count}</h2>
+        <h2 className="count">{count}</h2>
       </div>
       <div className="row">
+        <h2 className="title">Choose your weapon!</h2>
+      </div>
+      <div className="btn-row">
         <Button type="button" onClick={handleClick} name="rock" alt="rock">
           ROCK
         </Button>
@@ -63,7 +66,7 @@ function Choice({history}) {
           SCISSORS
         </Button>
       </div>
-    </>
+    </div>
   );
 }
 

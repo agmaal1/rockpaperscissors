@@ -12,7 +12,7 @@ function App() {
             <h2>ROCK PAPER SCISSORS</h2>
           </header>
         </div>
-        <div className="box">
+        <div>
           <Switch>
             <Route exact path='/' component={Welcome} />
             <Route exact path='/choice' component={Choice} />

@@ -17,6 +17,7 @@ body {
 .header-row {
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 .header-row h2 {
   font-size: 2rem;
@@ -38,7 +39,7 @@ body {
 .players-row {
   display: flex;
   justify-content: center;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .player {
@@ -47,6 +48,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .result {
@@ -58,7 +60,7 @@ body {
 
 .btn-row {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .btn-row button {
@@ -67,17 +69,16 @@ body {
 
 .box {
   border: solid 6px #cecece;
-  display: block;
+  display: flex;
+  justify-content: center;
   border-radius: 6px;
-  padding: 1rem 0.1rem ;
+  padding: 1rem 0.1rem;
 }
-
 
 @media screen and (min-width: 600px) {
   .box {
     padding: 4rem 2.25rem 2.25rem;
   }
-  
 }
 
 .btn {
@@ -105,7 +106,18 @@ body {
   background-color: rgb(194, 194, 194);
 }
 
-.row{
+.row {
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.game-row {
+  display: flex;
+  justify-content: center;
+  margin: 10rem;
+}
+
+.count {
+  font-size: 4rem;
 }

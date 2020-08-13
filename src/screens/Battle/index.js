@@ -17,7 +17,7 @@ function Battle({ player1, history }) {
   };
 
   return (
-    <>
+    <div>
       <div className="player-row">
         <Player weapon={player1} />
         <div className="result">
@@ -35,7 +35,7 @@ function Battle({ player1, history }) {
           TRY AGAIN!
         </Button>
       </div>
-    </>
+    </div>
   );
 }
 
