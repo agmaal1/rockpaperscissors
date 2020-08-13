@@ -53,6 +53,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.8rem;
 }
 
 .btn-row {
@@ -68,7 +69,15 @@ body {
   border: solid 6px #cecece;
   display: block;
   border-radius: 6px;
-  padding: 4rem 2.25rem 2.25rem;
+  padding: 1rem 0.1rem ;
+}
+
+
+@media screen and (min-width: 600px) {
+  .box {
+    padding: 4rem 2.25rem 2.25rem;
+  }
+  
 }
 
 .btn {
@@ -96,6 +105,4 @@ body {
   background-color: rgb(194, 194, 194);
 }
 
-.result {
-  font-size: 2rem;
-}
+
