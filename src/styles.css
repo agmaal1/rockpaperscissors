@@ -95,6 +95,7 @@ body {
   text-align: center;
   white-space: nowrap;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .btn:hover {

@@ -1,16 +1,19 @@
 import React from "react";
-import Button from "../../lib/Button";
+import { Link } from "react-router-dom";
 
-function Welcome({ history }) {
-  const handleClick = () => {
-    history.push("/choice");
-  };
-
+function Welcome() {
   return (
-    <div className="row">
-      <Button type="button" onClick={handleClick} name="rock" alt="rock">
-        START
-      </Button>
+    <div>
+      <div className="header-row">
+        <header>
+          <h2>ROCK PAPER SCISSORS</h2>
+        </header>
+      </div>
+      <div className="row">
+        <Link className="btn" to="choice" name="rock" alt="start">
+          START
+        </Link>
+      </div>
     </div>
   );
 }

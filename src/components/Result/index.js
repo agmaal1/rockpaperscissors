@@ -30,7 +30,11 @@ const displayResult = (player1, player2) => {
 };
 
 function Result({ player1, player2 }) {
-  return <h3 className="result">{displayResult(player1, player2)}</h3>;
+  return (
+    <div className="result">
+      <h3 className="result">{displayResult(player1, player2)}</h3>
+    </div>
+  );
 }
 
 export default Result;

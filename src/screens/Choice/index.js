@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Button from "../../lib/Button";
 import Battle from "../../screens/Battle";
+import Timeout from "../../screens/Timeout";
 
-function Choice({history}) {
+function Choice({ history }) {
   const [count, setCount] = useState(10);
   const [player1, setPlayer1] = useState();
 
@@ -11,35 +12,22 @@ function Choice({history}) {
     setPlayer1(weapon);
   };
 
-  const handleClickStart = () => {
-    history.push('/')
-  };
-
   useEffect(() => {
+    let timeout;
     if (count > 0) {
-      setTimeout(() => {
+      timeout = setTimeout(() => {
         setCount(count - 1);
       }, 1000);
     }
+    return () => clearTimeout(timeout);
   }, [count]);
 
   if (player1) {
-    return <Battle player1={player1} history={history}/>;
+    return <Battle player1={player1} history={history} />;
   }
 
   if (count === 0) {
-    return (
-      <div>
-        <div className="row">
-          <h2 className="count">Time out!</h2>
-        </div>
-        <div className="row">
-        <Button type="button" onClick={handleClickStart} name="paper" alt="paper">
-          TRY AGAIN!
-        </Button>
-        </div>
-      </div>
-    );
+    return <Timeout/>;
   }
 
   return (
