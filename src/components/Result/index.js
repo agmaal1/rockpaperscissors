@@ -1,36 +1,36 @@
 import React from "react";
-import {weapons} from '../../infrastructure/constants'
+import { ROCK, PAPER, SCISSORS } from "../../infrastructure/constants";
 
 const TIE = "Tie!";
 const LOSE = "You Lose!";
 const WIN = "You Win!";
 
-function Result({ player1, player2 }) {
-  const displayResult = () => {
-      if (player1 === player2) {
-        return TIE;
-      }
-      if (player1 === weapons[0] && player2 === weapons[1]) {
-        return LOSE;
-      }
-      if (player1 === weapons[0] && player2 === weapons[2]) {
-        return WIN;
-      }
-      if (player1 === weapons[1] && player2 === weapons[2]) {
-        return LOSE;
-      }
-      if (player1 === weapons[2] && player2 === weapons[1]) {
-        return WIN;
-      }
-      if (player1 === weapons[1] && player2 === weapons[0]) {
-        return WIN;
-      }
-      if (player1 === weapons[2] && player2 === weapons[0]) {
-        return LOSE;
-      }
+const displayResult = (player1, player2) => {
+  if (player1 === player2) {
+    return TIE;
   }
+  if (player1 === ROCK && player2 === PAPER) {
+    return LOSE;
+  }
+  if (player1 === ROCK && player2 === SCISSORS) {
+    return WIN;
+  }
+  if (player1 === PAPER && player2 === SCISSORS) {
+    return LOSE;
+  }
+  if (player1 === SCISSORS && player2 === PAPER) {
+    return WIN;
+  }
+  if (player1 === PAPER && player2 === ROCK) {
+    return WIN;
+  }
+  if (player1 === SCISSORS && player2 === ROCK) {
+    return LOSE;
+  }
+};
 
- return <h3 className='result'>{displayResult()}</h3>
+function Result({ player1, player2 }) {
+  return <h3 className="result">{displayResult(player1, player2)}</h3>;
 }
 
-export default Result
+export default Result;
